@@ -6,6 +6,17 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <script>
+            const onSubmit = () => {
+                //event.preventDefault();
+                let firstNameInput = document.getElementById("firstName");                
+                console.log(firstNameInput.value);
+                firstNameInput.value = "Me";
+
+                let labels = document.getElementsByClassName("radio-label");
+                console.log(labels);
+            };
+        </script>
     </head>
     <body>
         <div class="container">
@@ -28,18 +39,21 @@
                 <input type="date" id="dob" name="dob" />
 
                 <label>Membership Level *</label>
-                <div>
-                    <input type="radio" id="full" value="full" />
-                    <label class="radio-label" >Full Access</label>
+                <div class="radio-container">
+                    <input type="radio" id="full" value="full" name="membershipLevel"/>
+                    <label for="full" class="radio-label" >Full Access</label>
                     
-                    <input type="radio" id="op" value="op" />
-                    <label class="radio-label" >Off Peak</label>
+                    <input type="radio" id="op" value="op" name="membershipLevel"/>
+                    <label for="op" class="radio-label" >Off Peak</label>
                     
-                    <input type="radio" id="allg" value="allg" />
-                    <label class="radio-label" >All Gyms</label>
+                    <input type="radio" id="allg" value="allg" name="membershipLevel"/>
+                    <label for="allg" class="radio-label" >All Gyms</label>
                 </div>
 
-                <button type="submit">Submit</button>
+                <label for="terms">I accept the <a href="tandc.html" target="_blank">terms and conditions</a></label>
+                <input type="checkbox" id="terms" name="terms" value="yes" />
+
+                <button type="submit" onclick="onSubmit()">Submit</button>
             </form>
         </div>
     </body>

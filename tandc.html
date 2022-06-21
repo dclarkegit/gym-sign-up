@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Terms and conditions</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <script>
+            console.log("hello goodbye");
+
+            let myName = "Diarmuid";
+            let myAge = 21;
+            const myColours = ["red", "blue", "green"]
+
+            for(i=0; i < myColours.length; i++){
+                console.log(myColours[i]);
+            }
+
+            for (s of myColours){
+                console.log(s);
+            }
+
+            let x = 6;
+            let y = 15;
+
+            x += 1;
+
+            console.log(x);
+
+           let sentence =  `My Name is ${myName}`;
+           console.log(sentence);
+
+           const customer = {name: "DC", 
+                                age:myAge,
+                                children: ["A", "B"],
+                                prefs: {favouriteColour: "Red"}
+                                };
+            
+            customer.age = 22;
+            console.log(customer);
+
+            const cust2 = {...customer, age:24, surname:"Indeed"};
+            console.log (cust2);
+
+            function printHello(name){
+                console.log(`Hello world ${name}`);
+            }
+
+            const printHello1 = (name) => {  console.log(`Hello world ${name}`);}
+
+            const printHello2 = name => console.log(`Hello world ${name}`);
+
+            const getHello1 = (name) => {  
+                return `Hello world ${name}`;
+            }
+
+            const getHello2 = name => `Hello world ${name}`;
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Terms and conditions</h1>
+            <p>These are the ts and cs</p>
+
+            <button onclick="printHello('Big');">Click Me</button>
+            <button onclick="printHello1('Man');">Click Me</button>
+
+            <h2>Table</h2>
+            
+            <table>
+                <thead>
+                    <tr><th>Membership Type</th><th>Price</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Full membership</td><td>&euro; 300</td></tr>
+                    <tr><td>Off Peak membership</td><td>&euro; 200</td></tr>
+                    <tr><td>All Gyms membership</td><td>&euro; 499</td></tr>
+                    <tr><td colspan="2">Please contact us for more information</td></tr>
+                </tbody>
+            </table>
+    </body>
+</html>
