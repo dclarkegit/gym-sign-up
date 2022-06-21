@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gym Sign-up</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sign Up</h1>
+            <form action="test.html" method="get"> <!-- Should be post - just testing with get to see values in browser -->
+                <label for="custTitle">Title *</label>
+                <select id="custTitle" name="custTitle" required>
+                    <option value="" disabled selected>-- Select --</option>
+                    <option value="mr">Mr</option>
+                    <option value="ms">Ms</option>
+                    <option value="mx">Mx</option>
+                </select>
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required />
+                
+                <label for="surname">Surname *</label>
+                <input type="text" id="surname" name="surname" required />
+
+                <label for="dob">Date Of Birth</label>
+                <input type="date" id="dob" name="dob" />
+
+                <label>Membership Level *</label>
+                <div>
+                    <input type="radio" id="full" value="full" />
+                    <label class="radio-label" >Full Access</label>
+                    
+                    <input type="radio" id="op" value="op" />
+                    <label class="radio-label" >Off Peak</label>
+                    
+                    <input type="radio" id="allg" value="allg" />
+                    <label class="radio-label" >All Gyms</label>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
