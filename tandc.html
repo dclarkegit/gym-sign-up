@@ -59,9 +59,9 @@
 
             const collapseTable = () => {
                 let headSpan = document.getElementById("tableSymbol");
-                headSpan.innerHTML = "^";
+                if (headSpan.innerHTML === "&gt;") {headSpan.innerHTML = "^";} else {headSpan.innerHTML = "&gt;";}
                 let tableDiv = document.getElementById("tblMembershipType");
-                tableDiv.style.display = "inline";
+                if (tableDiv.style.display === "inline") {tableDiv.style.display = "block";} else {tableDiv.style.display = "inline";} 
             }
 
 
@@ -72,10 +72,7 @@
             <h1>Terms and conditions</h1>
             <p>These are the ts and cs</p>
 
-            <button onclick="printHello('Big');">Click Me</button>
-            <button onclick="printHello1('Man');">Click Me</button>
-
-            <h2 onclick="collapseTable()"><span id="tableSymbol">&gt;</span>Table</h2>
+            <h2 onclick="collapseTable()" class="tableHeading"><span id="tableSymbol">&gt;</span>Table</h2>
             
             <table id="tblMembershipType" style="display: none;">
                 <thead>

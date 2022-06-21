@@ -40,3 +40,7 @@ table, td, th {
     border-collapse: collapse;
     padding: 1px;
 }
+
+.tableHeading {
+    cursor: pointer;
+}
