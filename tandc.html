@@ -57,6 +57,12 @@
 
             const getHello2 = name => `Hello world ${name}`;
 
+            const collapseTable = () => {
+                let headSpan = document.getElementById("tableSymbol");
+                headSpan.innerHTML = "^";
+                let tableDiv = document.getElementById("tblMembershipType");
+                tableDiv.style.display = "inline";
+            }
 
 
         </script>
@@ -69,9 +75,9 @@
             <button onclick="printHello('Big');">Click Me</button>
             <button onclick="printHello1('Man');">Click Me</button>
 
-            <h2>Table</h2>
+            <h2 onclick="collapseTable()"><span id="tableSymbol">&gt;</span>Table</h2>
             
-            <table>
+            <table id="tblMembershipType" style="display: none;">
                 <thead>
                     <tr><th>Membership Type</th><th>Price</th></tr>
                 </thead>
